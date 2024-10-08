@@ -1,0 +1,32 @@
+@import './index.scss';
+
+.my-input{
+    border-radius: 15px;
+    display: flex;
+    height: 45px;
+    padding: 5px;
+    
+    margin-top: 5%;
+    input{
+        border: none;
+        border-bottom: solid silver;
+        border-radius: 0%;
+        width: 22em;
+    }
+
+    i {
+        font-size: 1.5em;
+        padding-right: 0.3em;
+    }
+}
+
+.btn-sesion{
+    background-color: $AzulAca;
+    color: whitesmoke;
+    margin-top: 1em;
+
+    &:hover{
+        background-color: $AzulClaroAca;
+    }
+}
+
