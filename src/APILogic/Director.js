@@ -1,18 +1,14 @@
 import axios from "axios";
-
-// Leer la variable de entorno
 const apiUrl = import.meta.env.VITE_API_URL;
 
-// Leer todos (GET)
-export const getAllCareers = async () => {
+export async function getADirector(email) {
   try {
-    const response = await axios.get(`${apiUrl}/api/Careers`);
+    const response = await axios.get(`${apiUrl}/api/Directores/${email}`);
     return response;
-    
-  }catch (error) {
+  } catch (error) {
     if (error.response) {
       // La solicitud se realizó y el servidor respondió con un código de estado fuera del rango 2xx
-      console.log("Error obteniendo las carreras:", error);
+      console.log("Error logueando Director:", error);
       console.log("API status:", error.response.status);
       console.log("API content:", error.response.data);
 
@@ -37,4 +33,4 @@ export const getAllCareers = async () => {
       };
     }
   }
-  };
+}

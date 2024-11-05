@@ -1,0 +1,57 @@
+@import './index.scss';
+
+.EditorLessons{
+    form{
+        label{
+            font-size: xx-large;
+            padding: 1%;
+        }
+        select{
+            border-radius: 30px;
+            width: 15%;
+            padding: 10px;
+            margin-right: 8%;
+        }
+
+        .btn-subm{
+            color: whitesmoke;
+            border-radius: 30px;
+            font-size: large;
+            padding: 1.2%;
+            width: 10%;
+            background-color: $AzulAca;
+
+            &:hover{
+                background-color: $AzulClaroAca;
+            }
+        }
+    }
+
+    .btn-creat {
+        color: whitesmoke;
+            border-radius: 30px;
+            font-size: x-large;
+            padding: 1%;
+            margin: 1.5%;
+            width: 95%;
+            background-color: $AzulAca;
+
+            &:hover{
+                background-color: $AzulClaroAca;
+            }
+    }
+
+    .btn-delete{
+        background-color: $RojoFuerteAca;
+        color: whitesmoke;
+        transition: 0.3s;
+
+        &:hover{
+            background-color: $RojoClaroAca;
+        }
+    }
+
+    .accordion{
+        padding: 2.5%;
+    }
+}

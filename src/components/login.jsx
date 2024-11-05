@@ -5,6 +5,7 @@ import { browserSessionPersistence, setPersistence, signInWithEmailAndPassword }
 import { auth } from "../firebase/firebaseConfig"
 import { getAStudent } from "../APILogic/Students"
 import { isNullOrEmpty } from "../globalFunctions"
+import { getADirector } from "../APILogic/Director"
 
 export function Login() {
     const [error, setError] = useState(0)
@@ -40,22 +41,26 @@ export function Login() {
             return
         }
 
-        const userInfo = await getAStudent(email)
+        var userInfo = await getAStudent(email)
 
         if (userInfo.status == 200) {
-            console.log("User Info: ", userInfo)
-
-            navigate('DashboardStudent', {state: userInfo.data.student})            
+            navigate('DashboardStudent', {state: userInfo.data})            
         }else{
-            setError(3)
-            return
+            userInfo = await getADirector(email)
+
+            if (userInfo.status == 200) {
+                navigate('DashboardDirector', {state: userInfo.data})            
+            }else{
+                setError(3)
+                return
+            }
         }
 
     }
 
     return (
         <React.Fragment>
-            <div class="container">
+            <div class="container loggin-box">
                     <div class="d-flex justify-content-center align-items-center">
                     <div class="card">
                       <div class="card-body">

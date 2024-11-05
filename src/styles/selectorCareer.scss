@@ -1,0 +1,24 @@
+@import './index.scss';
+
+.selector-career-edit{
+    p{
+        padding: 2%;
+        color: $GrisAca;
+    }
+
+    .btn-createCareer{
+        border: none;
+        border-radius: 30px;
+        padding: 1.5%;
+        width: 95%;
+        font-size: large;
+        color: whitesmoke;
+        background-color: $AzulAca;
+        transition: 0.3s;
+
+        &:hover{
+            background-color: $AzulClaroAca;
+            box-shadow: 5px 5px $GrisAca;
+        }
+    }
+}

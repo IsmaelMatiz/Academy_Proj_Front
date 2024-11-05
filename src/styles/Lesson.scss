@@ -1,0 +1,47 @@
+@import './index.scss';
+
+.Lesson-v{
+    
+    .vertical-menu{
+        float: left;
+        background-color: $AzulAca;
+        width: 22%;
+        height: 100dvh; /* Altura dinámica según la ventana de visualización real */
+        overflow-y: auto;
+
+        .nav-item{
+            transition: 0.4s;
+            padding: 20px;
+            border-bottom: solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .nav-link{
+                font-size: xx-large;
+                color: white;
+            }
+
+            &:hover{
+                background-color: $AzulClaroAca;
+                box-shadow: 15px 15px;
+            }
+        }
+    }
+}
+
+.class-info{
+    display: flex;
+    justify-content: left;
+    padding-left: 4%;
+    padding-top: 2%;
+    overflow-y: auto;
+
+    .con-container{
+        text-align: start;
+
+        .teacherInfo{
+            color: grey;
+        }
+    }
+}
